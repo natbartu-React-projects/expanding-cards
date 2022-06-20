@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;600&family=Roboto:ital,wght@1,100&display=swap');
+
+* {
+  box-sizing: border-box;
+  border: 1px solid blue;
+}
+
+.containerCard{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  
+}
+
+.gridPanel {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  margin-top: 30px;
+}
+
+.gridPanel > div {
+  border-radius: 50px;
+  background-color: #c2c2f1;
+  background-position: no-repeat;
+  margin: 5px;
+  max-width: 100%;
+  
+}
+img {
+    width:100%;
+    height:100%;
+}
+

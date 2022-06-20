@@ -1,17 +1,27 @@
 import React from "react";
+import styles from "./Cards.module.css";
+
 import boys from "./../../assets/boys.jpeg";
 
-import { Typography, Card, Container, CardMedia } from "@mui/material";
+import { Card, Container, CardMedia, Grid } from "@mui/material";
 
 const Cards = () => {
   return (
-    <Container>
-      <Card sx={{ maxWidth: 345 }}>
-        <CardMedia component="img" heigth="80vh" src={boys} alt="boys" />
-        <Typography gutterBottom variant="h3" component="div">
-          Boys
-        </Typography>
-      </Card>
+    <Container className={styles.containerCard}>
+      <Grid className={styles.gridPanel}>
+        {[
+          { image: boys },
+          { image: boys },
+          { image: boys },
+          { image: boys },
+          { image: boys },
+          { image: boys },
+        ].map((item) => (
+          <Card>
+            <CardMedia component="img" src={item.image} alt="boys" />
+          </Card>
+        ))}
+      </Grid>
     </Container>
   );
 };
