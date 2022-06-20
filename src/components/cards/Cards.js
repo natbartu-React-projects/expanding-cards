@@ -9,18 +9,9 @@ const Cards = () => {
   return (
     <Container className={styles.containerCard}>
       <Grid className={styles.gridPanel}>
-        {[
-          { image: boys },
-          { image: boys },
-          { image: boys },
-          { image: boys },
-          { image: boys },
-          { image: boys },
-        ].map((item) => (
-          <Card>
-            <CardMedia component="img" src={item.image} alt="boys" />
-          </Card>
-        ))}
+        <Card>
+          <CardMedia component="img" src={boys} alt="boys" />
+        </Card>
       </Grid>
     </Container>
   );
