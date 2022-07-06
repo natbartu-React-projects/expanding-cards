@@ -1,16 +1,32 @@
 import React from "react";
+import styles from "./App.module.css";
 
-import Cards from "../cards/Cards";
-import "./App.css";
+import { images } from "../../data/data";
+
+import { Container, Typography } from "@mui/material";
+
+import ExpandingCard from "../expandingCard/ExpandingCard";
 
 function App() {
   return (
-    <div className="mainContainer">
-      <div className="content">
-        <h1>Never Grow Up</h1>
-        <Cards />
-      </div>
-    </div>
+    <Container disableGutters={true}>
+      <Typography
+        variant="h3"
+        className="header"
+        style={{
+          fontFamily: "Dancing Script, cursive",
+          textAlign: "center",
+          color: "whitesmoke",
+          textShadow: "1px 1px #aafa32",
+          padding: "10px",
+          marginTop: "10px",
+        }}>
+        Criando Memórias
+      </Typography>
+      <Container disableGutters={true} className={styles.mainContainer}>
+        <ExpandingCard data={images} />
+      </Container>
+    </Container>
   );
 }
 

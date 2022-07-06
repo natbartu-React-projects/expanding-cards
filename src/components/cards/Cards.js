@@ -1,18 +1,42 @@
 import React from "react";
+
 import styles from "./Cards.module.css";
 
-import boys from "./../../assets/boys.jpeg";
+import { Typography, CardMedia, Container } from "@mui/material";
+//import { styled } from "@mui/material/styles";
 
-import { Card, Container, CardMedia, Grid } from "@mui/material";
+// const Responsive = styled("div")(({ theme }) => ({
+//   [theme.breakpoint.down("sm")]: {
 
-const Cards = () => {
+//   },
+// }));
+
+const Cards = (props) => {
+  const { id, url, title, active } = props.data;
+
   return (
-    <Container className={styles.containerCard}>
-      <Grid className={styles.gridPanel}>
-        <Card>
-          <CardMedia component="img" src={boys} alt="boys" />
-        </Card>
-      </Grid>
+    <Container disableGutters={true} className={styles.cardMediaContainer}>
+      <CardMedia
+        key={id}
+        className={active ? styles.cardActive : styles.card}
+        style={{ backgroundImage: `url(${url})` }}
+        onClick={() => props.onCardClick(id)}
+        alt="kids">
+        {active ? (
+          <Typography
+            variant="h5"
+            style={{
+              color: "#aafa32",
+              fontFamily: "Dancing Script, cursive",
+              position: "relative",
+              textAlign: "center",
+            }}>
+            {title}
+          </Typography>
+        ) : (
+          <span />
+        )}
+      </CardMedia>
     </Container>
   );
 };
