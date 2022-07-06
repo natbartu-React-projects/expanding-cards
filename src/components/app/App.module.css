@@ -4,3 +4,21 @@
   align-items: center;
   margin-top: 30px;
 }
+
+
+/*iphone */
+@media (max-width: 667px) {
+  .appContainer {
+    border-width: 0px;
+    border: none;
+    outline: none;
+  }
+}
+/* ipad */
+@media (max-width: 1024px) {
+  .appContainer {
+    border-width: 0px;
+    border: none;
+    outline: none;
+  }
+}

@@ -9,7 +9,7 @@ import ExpandingCard from "../expandingCard/ExpandingCard";
 
 function App() {
   return (
-    <Container disableGutters={true}>
+    <Container disableGutters={true} className="appContainer">
       <Typography
         variant="h3"
         className="header"

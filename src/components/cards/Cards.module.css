@@ -22,13 +22,26 @@
    margin-right: 25px;
 }
 
-/* iphone */
-@media (max-width: 480px) {
+/*iphone */
+@media (max-width: 667px) {
    .cardActive {
-      width: 200px;
+      max-width: 200px;
       margin-right: 10px;
    }
    .card {
-      width: 20px;
+      max-width: 20px;
+   }
+}
+
+/* ipad */
+@media (max-width: 1024px) {
+   .cardActive {
+      width: 400px;
+      margin-right: 7px;
+      height: 80vh;
+   }
+   .card {
+      height: 80vh;
+      width: 40px;
    }
 }
